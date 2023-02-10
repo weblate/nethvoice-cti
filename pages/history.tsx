@@ -5,7 +5,7 @@ import type { NextPage } from 'next'
 import { Filter } from '../components/history/Filter'
 import { Button, EmptyState, InlineNotification } from '../components/common'
 import { useState, useEffect, useMemo } from 'react'
-import { search, PAGE_SIZE, openDrawerHistory, getCallTimeToDisplay } from '../lib/history'
+import { search, PAGE_SIZE, openDrawerHistory } from '../lib/history'
 import { RootState } from '../store'
 import { useSelector } from 'react-redux'
 import { debounce } from 'lodash'
@@ -21,7 +21,7 @@ import {
   faPhoneArrowUp,
   faPhoneXmark,
 } from '@nethesis/nethesis-solid-svg-icons'
-import { formatDateLoc } from '../lib/dateTime'
+import { formatDateLoc, getCallTimeToDisplay } from '../lib/dateTime'
 import { subDays, startOfDay } from 'date-fns'
 
 const History: NextPage = () => {
@@ -593,7 +593,7 @@ const History: NextPage = () => {
                               {formatDateLoc(call.time * 1000, 'PP')}
                             </div>
                             <div className='text-sm text-gray-500'>
-                              {getCallTimeToDisplay(call.time)}
+                              {getCallTimeToDisplay(call.time * 1000)}
                             </div>
                           </div>
                         </div>

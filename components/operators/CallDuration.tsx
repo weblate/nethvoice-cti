@@ -3,7 +3,7 @@
 
 import { FC, ComponentProps, useState, useEffect } from 'react'
 import classNames from 'classnames'
-import { formatDuration } from '../../lib/dateTime'
+import { formatCallDuration } from '../../lib/dateTime'
 
 export interface CallDurationProps extends ComponentProps<'div'> {
   startTime: number
@@ -33,7 +33,7 @@ export const CallDuration: FC<CallDurationProps> = ({ startTime, className }): J
 
   return (
     <>
-      <div className={classNames(className)}>{formatDuration(duration)}</div>
+      <div className={classNames(className)}>{formatCallDuration(duration)}</div>
     </>
   )
 }
