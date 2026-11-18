@@ -1,3 +1,6 @@
+> [!IMPORTANT]
+> This repository is archived. The source code now lives in [nethesis/ns8-nethvoice](https://github.com/nethesis/ns8-nethvoice/tree/main/nethvoice-cti) and is built and released with the NethVoice module. Open issues and pull requests there.
+
 # NethVoice CTI
 
 NethVoice CTI is a web application allows the user to have a web phone to manage calls, modify the phonebook, handle the queues of a switchboard, use the chat between connected users and much more.
